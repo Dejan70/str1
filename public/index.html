@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta http-equiv="X-UA-CompatibIe" content="ie=edge">
+<title>ToDo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <p   style=" position: absolute; left: 110px;   top: 230px;font-size:30px; color:black;" id="a1">OEE</p>
+    <div  class ="jumbotron text-center">          
+        <h3>ToDo App</h3>  
+        <div class ="row">
+            <div class="col-6 offset-3">
+            <div class="input-group">
+                <input type="text" id="input1" class="form-control" placeholder="new message">
+                <input type="text" id="input2" class="form-control" placeholder="new message">
+
+                <div class="input-group-append">
+                    <button id="addBtn1" class="btn btn-sm btn-primary">Create</button>
+                    <button id="addBtn2" class="btn btn-sm btn-primary">Create</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="container">
+        <div class ="row">   
+            <div class="col-10 offset-1">
+                <div class ="row"> 
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"> 
+                                <button class="btn btn-sm btn-secondary float-left">ToDo:1</button>
+                                <button class="btn btn-sm btn-success float-right">Sun 15.05.</button>       
+                            </div>
+                            <div class="card-body text-center">
+                            <h3>Uciti MongoDb</h3>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button class="btn btn-sm btn-danger">Delete</button> 
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="message"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    socket.on('message', function(msg){
+      console.log(msg);
+      document.getElementById("message").innerHTML = msg;
+    });
+  </script>
+    <script src="main.js"></script>
+</body>
+</html>
