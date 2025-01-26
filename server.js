@@ -14,11 +14,15 @@ const morgan = require('morgan');
 
 //const cam1 = "http://192.168.2.31/videostream.cgi?user=admin&pwd=admin";
 //const cam1 = "http://192.168.1.14:8003/?action=stream";
-const cam1 = "http://192.168.1.14:8003/?action=stream";
+//const cam1 = "http://192.168.1.14:8003/?action=stream";//   home
+
+const cam1 = "http://109.245.67.130:8003/?action=stream";//   DO
 
 //const cam2 = "http://192.168.2.30/videostream.cgi?user=admin&pwd=admin";
 //const cam2 = "http://192.168.1.14:8004/?action=stream";
-const cam2 = "http://192.168.1.10:8004/?action=stream";
+//const cam2 = "http://192.168.1.14:8004/?action=stream";  //home
+
+const cam2 = "http://109.245.67.130:8004/?action=stream";  //DO
 
 //var app = express();
 app.use(errorHandler({ dumpExceptions: true, showStack: true }));
