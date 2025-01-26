@@ -14,7 +14,7 @@ const morgan = require('morgan');
 
 //const cam1 = "http://192.168.2.31/videostream.cgi?user=admin&pwd=admin";
 //const cam1 = "http://192.168.1.14:8003/?action=stream";
-const cam1 = "http://192.168.1.10:8003/?action=stream";
+const cam1 = "http://192.168.1.14:8003/?action=stream";
 
 //const cam2 = "http://192.168.2.30/videostream.cgi?user=admin&pwd=admin";
 //const cam2 = "http://192.168.1.14:8004/?action=stream";
